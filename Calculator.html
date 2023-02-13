@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        document.body.style.backgroundImage = "url('./Love-that-Design-NOVO-01.webp')";
+        // document.body.style.display = "grid";
+        // document.body.style.placeItems = "center";
+        // document.body.style.height = "95vh";
+        // document.body.style.width = "99%";
+
+        const Add = document.createElement("button");
+        Add.innerHTML = "ADD";
+        Add.style.padding = "10px 30px";
+        Add.style.fontSize = "20px";
+        Add.style.fontWeight = "800";
+        Add.style.color = "blue";
+        document.body.appendChild(Add).onclick = function () {
+
+            Add.style.display = "none";
+
+            const ENternum = document.createElement("p")
+            ENternum.style.color = "white";
+            ENternum.innerHTML = "Enter The First Number";
+            document.body.appendChild(ENternum);
+
+            const firstValue = document.createElement("input")
+            firstValue.setAttribute("id", "FirstValueId");
+            document.body.appendChild(firstValue).onkeypress = function (event) {
+                var aCode = event.which ? event.which : event.keyCode;
+                if (aCode > 31 && (aCode < 48 || aCode > 57)) return false;
+                return true;
+            };
+
+            const ENteroper = document.createElement("p")
+            ENteroper.style.color = "white";
+            ENteroper.innerHTML = "Enter The Operator(+ , - , * , / )";
+            document.body.appendChild(ENteroper);
+
+            const Second = document.createElement("input");
+            Second.setAttribute("id", "SecondValueId");
+            document.body.appendChild(Second).onkeypress = function (event) {
+                var aCode = event.which ? event.which : event.keyCode;
+                if (aCode > 31 && (aCode < 42 || aCode > 47)) return false;
+                return true;
+            };
+
+            const ENterSec = document.createElement("p")
+            ENterSec.style.color = "white";
+            ENterSec.innerHTML = "Enter The Second Number";
+            document.body.appendChild(ENterSec);
+
+            const thirdValue = document.createElement("input");
+            thirdValue.setAttribute("id", "thirdValueId");
+            document.body.appendChild(thirdValue).onkeypress = function (event) {
+                var aCode = event.which ? event.which : event.keyCode;
+                if (aCode > 31 && (aCode < 48 || aCode > 57)) return false;
+                return true;
+            };
+
+            const br = document.createElement("br")
+            document.body.appendChild(br);
+            const twoobr = document.createElement("br")
+            document.body.appendChild(twoobr);
+
+            const Submit = document.createElement("button");
+            Submit.innerHTML = "Submit";
+            Submit.style.padding = "3px 10px";
+            Submit.style.fontSize = "15px";
+            Submit.style.fontWeight = "800";
+            Submit.style.marginRight = "10px";
+            Submit.style.color = "blue";
+            document.body.appendChild(Submit).onclick = function () {
+                var firstValue = document.getElementById("FirstValueId").value;
+                var Second = document.getElementById("SecondValueId").value;
+                var thirdValue = document.getElementById("thirdValueId").value;
+
+                let result;
+                switch (Second) {
+                    case '+':
+                        result = firstValue += thirdValue;
+                        document.getElementById("ShowValueId").value = `${result}`;
+                        break;
+                    case '-':
+                        result = firstValue - thirdValue;
+                        document.getElementById("ShowValueId").value = `${result}`;
+                        break;
+                    case '*':
+                        result = firstValue * thirdValue;
+                        document.getElementById("ShowValueId").value = `${result}`;
+                        break;
+                    case '/':
+                        result = firstValue / thirdValue;
+                        document.getElementById("ShowValueId").value = `${result}`;
+                        break;
+                }
+            };
+
+            const cancel = document.createElement("button");
+            cancel.innerHTML = "Cancel";
+            cancel.style.padding = "3px 10px";
+            cancel.style.fontSize = "15px";
+            cancel.style.fontWeight = "800";
+            cancel.style.color = "blue";
+            document.body.appendChild(cancel);
+
+            const onbr = document.createElement("br")
+            document.body.appendChild(onbr);
+            const twobr = document.createElement("br")
+            document.body.appendChild(twobr);
+
+            const Output = document.createElement("p")
+            Output.style.color = "white";
+            Output.innerHTML = "Output Value";
+            document.body.appendChild(Output);
+
+            const showValue = document.createElement("input");
+            showValue.setAttribute("id", "ShowValueId");
+            document.body.appendChild(showValue);
+        };
+
+    </script>
+</body>
+
+</html>
