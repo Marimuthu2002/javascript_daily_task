@@ -13,7 +13,7 @@
     <script>
 
         const ENternum = document.createElement("p")
-        ENternum.innerHTML = "Enter The Number";
+        ENternum.innerText = "Enter The Number";
         document.body.appendChild(ENternum);
 
         const Value = document.createElement("input")
@@ -25,7 +25,7 @@
         };
 
         const Submit = document.createElement("button");
-        Submit.innerHTML = "Submit";
+        Submit.innerText = "Submit";
         Submit.style.marginLeft = "10px";
         Submit.style.fontSize = "13px";
         Submit.style.fontWeight = "800";
@@ -33,19 +33,26 @@
         Submit.style.color = "blue";
         document.body.appendChild(Submit).onclick = function () {
             var num = document.getElementById("FirstValueId").value;
-            var table = "";
             var i = 1;
+            var table = "";
             do {
+                table += "<div>"
                 for (let index = 1; index <= 10; index++) {
                     table += index + " " + "x" + " " + i + " " + "=" + " " + index * i + "</br>";
+                    if (index == 10) {
+                        table += "</div>";
+                    }
                 }
                 i++;
-                document.getElementById("mulTable").innerHTML = table;
             } while (i <= num);
+            document.getElementById("mulTable").innerHTML = table;
         }
 
-        const Show = document.createElement("p")
+        const Show = document.createElement("div")
         Show.setAttribute("id", "mulTable");
+        Show.style.display = "flex";
+        Show.style.gap = "20px";
+        Show.style.flexWrap = "wrap";
         document.body.appendChild(Show);
 
     </script>
