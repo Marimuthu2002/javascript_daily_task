@@ -24,10 +24,6 @@
             return true;
         };
 
-        const Show = document.createElement("p")
-        Show.setAttribute("id", "mulTable");
-        document.body.appendChild(Show);
-
         const Submit = document.createElement("button");
         Submit.innerHTML = "Submit";
         Submit.style.marginLeft = "10px";
@@ -40,11 +36,18 @@
             var table = "";
             var i = 1;
             do {
-                table += i + " " + "x" + " " + num + " " + "=" + " " + num * i + "</br>";
+                for (let index = 1; index <= 10; index++) {
+                    table += index + " " + "x" + " " + i + " " + "=" + " " + index * i + "</br>";
+                }
                 i++;
                 document.getElementById("mulTable").innerHTML = table;
-            } while (i < 11);
+            } while (i <= num);
         }
+
+        const Show = document.createElement("p")
+        Show.setAttribute("id", "mulTable");
+        document.body.appendChild(Show);
+
     </script>
 </body>
 
