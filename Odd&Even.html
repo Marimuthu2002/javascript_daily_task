@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="oddEven">
+    <button onclick="OddOrEven()">Submit</button>
+    <p id="show"></p>
+    <script>
+        function OddOrEven() {
+            var number = document.getElementById("oddEven").value;
+            let odd = 0;
+            let ttodd = "";
+            let even = 0;
+            let tteven = "";
+            let oddEven = 0;
+
+            for (var index = 0; index <= number; index++) {
+                if (index % 2 == 0) {
+                    even = even + index;
+                    tteven = index;
+                    document.write(index + "-" + "even" + "<br>");
+                }
+                else {
+                    odd = odd + index;
+                    ttodd = index;
+                    document.write(index + "-" + "Odd" + "<br>");
+                }
+            }
+            oddEven = odd + even;
+            document.write("Sum Number Of Odd = " + odd + "<br>");
+            document.write("Sum Number Of Even = " + even + "<br>");
+            document.write("Sum Number Of Even And Odd = " + oddEven + "<br>");
+
+            document.write("Total Number Of Even = " + tteven + "<br>");
+            document.write("Total Number Of Odd = " + ttodd + "<br>");
+
+
+            let string = "";
+            variable = 0;
+            for (let i = 1; i <= number; i++) {
+                for (let j = 1; j <= i; j++) {
+                    debugger
+                    if (variable > number) {
+                        break;
+                    }
+                    string += variable + " ";
+                    variable++;
+                }
+                string += "<br>";
+            }
+            document.write(string)
+        }
+    </script>
+</body>
+
+</html>

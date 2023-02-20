@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        a = [5, 7, 6, 33, 45, 9, 150, 80, 70]
+        a.sort(function (a, b) { return a - b });
+        let i = 0, j = a.length - 1;
+        res = [];
+        for (i; i <= j; i++) {
+            debugger
+            res.push(a[i]);
+            if (i <= j) {
+                res.push(a[j]);
+                j--;
+            }
+        }
+        console.log(res)
+
+
+
+        function funone(name, age) {
+            this.Username = name;
+            this.Userage = age
+        }
+        function funtwo(Username, Userage) {
+            funone.call(this.Username, this.Userage)
+        }
+        console.log(new funtwo("muthu", 5).Username);
+
+
+    </script>
+    <!-- <button onclick="arrowFun()">Clicl</button> -->
+    <!-- <script>
+        a="Hostimg";
+        var a;
+        var a;
+        var test = function (value) {
+            alert(value)
+        };
+        
+        function Check() {
+            alert()
+        }
+
+        var arrowFun = () => {
+            alert("Arrow")
+        };
+
+        let selfINvoke = (function (value) {
+            arrowFun();
+            alert(value)
+        })("Self");
+
+
+    </script> -->
+</body>
+
+</html>

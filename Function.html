@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div>
+        <input type="file" name="file" id="file">
+        <input type="button" id="uploadfile" value="Upload" onclick="test();">
+    </div> -->
+    <!-- <script>
+        let num = [45, 4, 9, 16, 25];
+        debugger;
+        // let num = [];
+        // let txt = " ";
+        // numbers.forEach(myFunction);
+        // function myFunction(value, index, array) {
+        //     txt.push(value * 2);
+        // }
+        // document.getElementById("demo").innerHTML = txt;
+
+
+
+        num.forEach((value, index) => {
+            num[index] = value * 3;
+        })
+        console.log(num);
+
+
+        // let a = numbers.forEach((value) => {
+        //     return value * 3;
+        // })
+
+    </script> -->
+    <script>
+
+
+
+        // function test($event) {
+        //     debugger
+        //     document.addEventListener("DOMContentLoaded", (res) => {
+        //         document.getElementById("uploadfile").addEventListener("file", test);
+        //     })
+        // }
+
+
+        let text = [];
+        var num = [1, 2, 3, 4, 5, 6];
+        num.forEach(myFunction);
+        function myFunction(value, index, array) {
+            text.push(num * 5)
+        }
+        console.log(text)
+
+        const numbers = [45, 4, 9, 16, 25];
+        let num = [];
+        let txt = " ";
+        numbers.forEach(myFunction);
+        function myFunction(value, index, array) {
+            txt.push(value * 2);
+        }
+        document.getElementById("demo").innerHTML = txt;
+        console.log(txt)
+
+
+        var regular = function (x) {
+            return (x + x)
+        }
+        alert(regular(5));
+
+
+
+        var arrow = (z) => {
+            return (z + z)
+        }
+        alert(arrow(7))
+
+
+        var anon = function () {
+            alert("hello");
+        }
+        anon();
+
+
+        (function (z) {
+            alert(z);
+        })(8);
+
+
+        function name() {
+            alert("functios");
+        }
+
+
+        var a = 10;
+        {
+            alert(a);
+        }
+    </script>
+</body>
+
+</html>
