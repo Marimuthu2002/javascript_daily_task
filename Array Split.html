@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <p id="tutorial"></p>
+
     <!-- <select name="cars" id="cars">
         <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>
@@ -70,6 +72,42 @@
     // console.log(b);
 
     // sakthivel task
+    // array = [5, 2, 7, 21, 324, 55, 46, 56, 1, 0]
+    // function Sort(array) {
+    //     for (let i = 0; i < array.length - 1; i++) {
+    //         for (let j = 0; j < array.length - i - 1; j++) {
+    //             if (array[j] > array[j + 1]) {
+    //                 let temp = array[j]
+    //                 array[j] = array[j + 1]
+    //                 array[j + 1] = temp
+    //             }
+    //         }
+    //     }
+    //     return array
+    // }
+    // console.log(Sort(array));
+
+
+    // sowndar task
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    a = [];
+    b = [];
+    c = [];
+    for (let index = 1; index < array.length; index++) {
+        const x = array.length / 3;
+        if (index < x) {
+            a.push(index);
+        }
+        else if (index > x) {
+            b.push(index);
+        }
+        else {
+            c.push(index);
+        }
+    }
+    console.log(a);
+    console.log(b);
+    console.log(c);
 
 </script>
 
